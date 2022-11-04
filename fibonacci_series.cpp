@@ -4,7 +4,6 @@ using namespace std;
 int main(){
     int n,t1=0,t2=1,t3;
     cin>>n;
-    // cout<<"Reverse of "<< n <<" is : ";
     for(int i=0;i<n;i++){
         if(i==0){
             cout<<t1<<" ";
