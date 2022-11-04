@@ -13,24 +13,30 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
-int main(){
-    long int price,even=0,odd=0;
-    cin>>price;
-    for(int i=1;i<=price;i++){
-        if(price%i==0){
+ 
+string solution(long n) {
+    int even=0,odd=0;
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
             i%2==0?even++:odd++;
         }
     }
     if(even==odd){
-        cout<<"PASS"<<endl;
+        return "PASS";
     }
     else if(even%2==0){
-        cout<<"BUY"<<endl;
+        return "BUY";
     }
     else{
-        cout<<"SELL"<<endl;
+        return "SELL";
     }
+
+}
+
+int main() {
+	long n;
+	cin >> n;	
+  	string answer=solution(n);
+	cout << answer << endl;
     
-    return 0;
 }
